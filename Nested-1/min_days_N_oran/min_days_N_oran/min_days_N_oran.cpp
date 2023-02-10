@@ -12,7 +12,7 @@ public:
         int min = 1000;
         if (n == 1 || n == 0)
             return n;
-        /*  (N/a)/b = (N/b)/a = (N/ab). where the division results are rounded down integer values, so some O(log_3(n)*log_2(n)) values explored*/
+        /*  (N/a)/b = (N/b)/a = (N/ab). where the division results are rounded down integer values, so some O(log_3(n)*log_2(n)) values explored at the most*/
         int n_2 = n / 2;
         int n_3 = n / 3;
         map<int, int>::iterator itr;
