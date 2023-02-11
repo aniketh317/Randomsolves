@@ -37,7 +37,7 @@ int main()
     int numCarpets = 2;
     int carpetLen = 3;
     int ret = sol.minimumWhiteTiles(floor, numCarpets, carpetLen);
-    cout << "min number of white carpets left: " << ret << endl;
+    cout << "min number of white tiles left: " << ret << endl;
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
