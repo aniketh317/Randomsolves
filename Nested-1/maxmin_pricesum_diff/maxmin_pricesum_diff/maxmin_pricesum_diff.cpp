@@ -19,7 +19,6 @@ private:
     void dfs1(int i)
     {
         /*Return the length of the longest path in the subtree rooted at i, updating nver*/
-        /*(maxlen, next_vertex)*/
         v[i] = true;
         int max = 0;//maxlen excl. of i in the subtree from i
         for (int k = 0; k < G[i].size(); k++)
@@ -43,7 +42,7 @@ private:
     vector<int>stack;
     void dfs2(int i, set<int>& pver, int dis)
     {
-        /*dis indicates sum of prices from the lowest ancestor pver upto this, excluding the ancestor */
+        /*dis indicates sum of prices from the lowest ancestor in pver upto this, excluding the ancestor */
         bool flag = false;
         v[i] = true;
         set<int>::iterator itr = pver.find(i);
@@ -108,7 +107,7 @@ public:
                     d = (d < maxp[j]) ? maxp[j] : d;
             }
             d += p[i];
-            maxp[i] = (maxp[i] < d) ? d : maxp[i];//Updated to longdest path from this vertex
+            maxp[i] = (maxp[i] < d) ? d : maxp[i];//Updated to longest path from this vertex
             i = nver[i];
         }
         for (int i = 0; i < n; i++)
@@ -128,7 +127,7 @@ int main()
     vector<vector<int>>edges{ V(0,1), V(1,2), V(1,3), V(3,4), V(3,5) };
     vector<int>price{ 9,8,7,6,10,5 };
     int ret = sol.maxOutput(n, edges, price);
-    cout << "Differene between Max and Min price Sum : " << ret << endl;
+    cout << "Difference between Max and Min price Sum : " << ret << endl;
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
