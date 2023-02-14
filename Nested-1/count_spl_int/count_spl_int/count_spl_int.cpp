@@ -20,7 +20,7 @@ public:
             dig++;
         }
         reverse(digits.begin(), digits.end());
-        vector<vector<int>>nPr(11, vector<int>(11, 1));//nPr[n][r] = nPr 
+        vector<vector<int>>nPr(11, vector<int>(11, 1));//nPr[i][j] = iPj 
         for (int i = 2; i <= 10; i++)
         {
             nPr[i][i] = nPr[i - 1][i - 1] * i;
