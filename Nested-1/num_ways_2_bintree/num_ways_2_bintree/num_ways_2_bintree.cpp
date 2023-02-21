@@ -12,7 +12,7 @@ private:
     void ncr_calc(vector<vector<ll>>&nCr, int n)
     {
         nCr.resize(n + 1, vector<ll>(n + 1, 1));//nCr[i][j] = iCj
-        vector<ll>inv(n + 1, 1);//stores inv[i] = (i! mod M)^-1 under the field.
+        vector<ll>inv(n + 1, 1);//stores inv[i] = (i! mod M)^-1 under the field {0,1,...M-1} under (+),(.) .
         vector<ll>fact(n + 1);//fact[i] = i!
         fact[0] = 1;
         for (int i = 1; i <= n; i++)
