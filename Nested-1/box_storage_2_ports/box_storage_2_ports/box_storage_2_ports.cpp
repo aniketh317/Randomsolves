@@ -61,7 +61,7 @@ struct seg_tree{
 
     int updnode(int ind, int l, int r, int val)
     {
-        /*Recursive call for lazy updates, for range query set val = 0 */
+        /*Recursive call for lazy updates */
         /*[l,r] will always intersect with T[ind]'s range*/
         if (T[ind].L == l && T[ind].R == r)
         {
@@ -93,7 +93,6 @@ struct seg_tree{
 
     int rquery(int ind, int l, int r)
     {
-        /*Recursive call for lazy updates, for range query set val = 0 */
         /*[l,r] will always intersect with T[ind]'s range*/
         if (T[ind].L == l && T[ind].R == r)
             return T[ind].rval + T[ind].lub;
