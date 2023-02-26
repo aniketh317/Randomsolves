@@ -38,8 +38,6 @@ class Solution {
 public:
     int oddEvenJumps(vector<int>& arr) {
         int siz = arr.size();
-        vector<int>onxt(siz, -1);//next jump from this index in case of odd jump, -1 means no jump
-        vector<int>enxt(siz, -1);//next jump from this index in case of even jump, -1 means no jump
         vector<bool>even(siz, false);//whether starting from even jump, end can be reached
         vector<bool>odd(siz, false);//whether startibg from odd jump, end can be reached
         even[siz - 1] = true;
