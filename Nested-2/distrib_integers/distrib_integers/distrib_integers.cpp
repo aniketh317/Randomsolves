@@ -14,7 +14,7 @@ private:
         /*
         M-- lookup table for weight to count at this stage
         ind -- vector of indices
-        Run-time is of order Bell-number(n), n is quantity size
+        Run-time is of order n*Bell-number(n)(log(m)), n is quantity size
         */
         map<int, int>::iterator itr;
         int isiz = ind.size();
