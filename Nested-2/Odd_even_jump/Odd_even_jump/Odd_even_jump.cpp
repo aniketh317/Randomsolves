@@ -39,7 +39,7 @@ public:
     int oddEvenJumps(vector<int>& arr) {
         int siz = arr.size();
         vector<bool>even(siz, false);//whether starting from even jump, end can be reached
-        vector<bool>odd(siz, false);//whether startibg from odd jump, end can be reached
+        vector<bool>odd(siz, false);//whether starting from odd jump, end can be reached
         even[siz - 1] = true;
         odd[siz - 1] = true;
         
